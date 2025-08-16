@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://ctny0q218cs1x"]
+[gd_scene load_steps=20 format=3 uid="uid://ctny0q218cs1x"]
 
+[ext_resource type="Script" uid="uid://dwdjp3i8kbqg" path="res://scripts/begitxo.gd" id="1_4hmr2"]
 [ext_resource type="Texture2D" uid="uid://4617juvxg12a" path="res://assets/begitxo_sprites_128x128/begitxo_down_1.png" id="1_o2lp6"]
 [ext_resource type="Texture2D" uid="uid://c5rguun34qnxo" path="res://assets/begitxo_sprites_128x128/begitxo_down_2.png" id="2_4hmr2"]
 [ext_resource type="Texture2D" uid="uid://db3mm1gai3grj" path="res://assets/begitxo_sprites_128x128/begitxo_down_3.png" id="3_rnvnb"]
@@ -93,11 +94,12 @@ radius = 50.0
 height = 104.0
 
 [node name="Begitxo" type="Area2D"]
+script = ExtResource("1_4hmr2")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vto60")
-animation = &"down"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_o2lp6")
