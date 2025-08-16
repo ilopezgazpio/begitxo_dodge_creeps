@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctny0q218cs1x"]
+[gd_scene load_steps=19 format=3 uid="uid://ctny0q218cs1x"]
 
 [ext_resource type="Texture2D" uid="uid://4617juvxg12a" path="res://assets/begitxo_sprites_128x128/begitxo_down_1.png" id="1_o2lp6"]
 [ext_resource type="Texture2D" uid="uid://c5rguun34qnxo" path="res://assets/begitxo_sprites_128x128/begitxo_down_2.png" id="2_4hmr2"]
@@ -38,23 +38,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_txymo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ii5kp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_2vsjf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_ohd3h")
-}],
-"loop": true,
-"name": &"left",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("9_o150f")
 }, {
 "duration": 1.0,
@@ -65,6 +48,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_c1ved")
+}],
+"loop": true,
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_txymo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ii5kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2vsjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ohd3h")
 }],
 "loop": true,
 "name": &"right",
@@ -88,11 +88,16 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o2lp6"]
+radius = 50.0
+height = 104.0
+
 [node name="Begitxo" type="Area2D"]
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vto60")
 animation = &"down"
-frame = 1
-frame_progress = 0.0075666
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_o2lp6")
