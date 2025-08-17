@@ -1,12 +1,55 @@
-[gd_scene format=3 uid="uid://bq88hox5nw2mk"]
+[gd_scene load_steps=7 format=3 uid="uid://bq88hox5nw2mk"]
+
+[ext_resource type="Script" uid="uid://mvmgaa604xpn" path="res://scripts/mob.gd" id="1_71rcx"]
+[ext_resource type="Texture2D" uid="uid://74byvse5onb6" path="res://assets/mob_sprites_128x128/mob1.png" id="1_d4cuo"]
+[ext_resource type="Texture2D" uid="uid://boso5pcnfgw4v" path="res://assets/mob_sprites_128x128/mob2.png" id="2_71rcx"]
+[ext_resource type="Texture2D" uid="uid://ttyiu73gk8kk" path="res://assets/mob_sprites_128x128/mob3.png" id="3_xsfyf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4cuo"]
+radius = 75.0
+height = 150.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8ps3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d4cuo")
+}],
+"loop": true,
+"name": &"mob1",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_71rcx")
+}],
+"loop": true,
+"name": &"mob2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xsfyf")
+}],
+"loop": true,
+"name": &"mob3",
+"speed": 5.0
+}]
 
 [node name="mob" type="RigidBody2D"]
 collision_mask = 0
 gravity_scale = 0.0
+script = ExtResource("1_71rcx")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_d4cuo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h8ps3")
+animation = &"mob1"
+frame_progress = 0.145084
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
