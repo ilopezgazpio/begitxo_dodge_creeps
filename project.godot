@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Begitxo Dodge Creeps"
+run/main_scene="uid://d0maw5drv8yrc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
