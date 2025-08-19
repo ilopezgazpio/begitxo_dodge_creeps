@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0maw5drv8yrc"]
+[gd_scene load_steps=6 format=3 uid="uid://d0maw5drv8yrc"]
 
 [ext_resource type="PackedScene" uid="uid://ctny0q218cs1x" path="res://scenes/begitxo.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cjgrtve6fha4g" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bq88hox5nw2mk" path="res://scenes/mob.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dkt03ckqtyvld" path="res://scenes/hud.tscn" id="3_jyhfs"]
 
 [sub_resource type="Curve2D" id="Curve2D_o5qli"]
 _data = {
@@ -13,6 +14,8 @@ point_count = 5
 [node name="main" type="Node"]
 script = ExtResource("1_sugp2")
 mob_scene = ExtResource("2_jyhfs")
+
+[node name="HUD" parent="." instance=ExtResource("3_jyhfs")]
 
 [node name="Begitxo" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(70, 88)
@@ -34,6 +37,7 @@ curve = SubResource("Curve2D_o5qli")
 wait_time = 2.0
 one_shot = true
 
+[connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="hit" from="Begitxo" to="." method="_on_begitxo_hit"]
 [connection signal="timeout" from="MobSpawnTimer" to="." method="_on_mob_spawn_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
