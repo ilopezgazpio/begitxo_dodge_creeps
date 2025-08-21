@@ -2,6 +2,8 @@ extends Node
 
 @export var mob_scene: PackedScene
 var score
+var energy
+var level
 
 func _on_begitxo_hit() -> void:
 	$ScoreTimer.stop()
@@ -10,10 +12,14 @@ func _on_begitxo_hit() -> void:
 	
 func new_game():
 	score = 0
+	energy = 0
+	level = 0
 	get_tree().call_group("mobs", "queue_free")
 	$Begitxo.start($PlayerStartPos.position)
 	$StartTimer.start()
-	$HUD.update_score(score)
+	$HUD.showHUD()
+	$MobSpawnTimer.wait_time = minf(1, 1.0/(level+1))
+	$HUD.update(score, energy, level)
 	$HUD.show_message("Get Ready")
 
 func _ready():
@@ -37,7 +43,7 @@ func _on_mob_spawn_timer_timeout() -> void:
 	mob.rotation = direction
 
 	# Choose the velocity for the mob.
-	var velocity = Vector2(randf_range(150.0, 250.0), 0.0)
+	var velocity = Vector2(randf_range(100 + level*50, 150 + level*55), 0.0)
 	mob.linear_velocity = velocity.rotated(direction)
 
 	# Spawn the mob by adding it to the Main scene.
@@ -45,7 +51,12 @@ func _on_mob_spawn_timer_timeout() -> void:
 
 func _on_score_timer_timeout() -> void:
 	score += 1
-	$HUD.update_score(score)
+		
+	if score % 30 == 0:		
+		level +=1
+		$MobSpawnTimer.wait_time = minf(1, 1.0/(level+1))
+		
+	$HUD.update(score, energy, level)
 
 func _on_start_timer_timeout() -> void:
 	$MobSpawnTimer.start()

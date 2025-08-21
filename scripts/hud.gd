@@ -2,6 +2,16 @@ extends CanvasLayer
 
 signal start_game
 
+func _ready():
+	$ScoreLabel.hide()
+	$EnergyLabel.hide()
+	$LevelLabel.hide()
+	
+func showHUD():
+	$ScoreLabel.show()
+	$EnergyLabel.show()
+	$LevelLabel.show()
+
 func show_message(text):
 	$Message.text = text
 	$Message.show()
@@ -18,8 +28,10 @@ func show_game_over():
 	await get_tree().create_timer(1.0).timeout
 	$StartButton.show()
 
-func update_score(score):
-	$ScoreLabel.text = "alive:" + str(score)
+func update(score, energy, level):
+	$ScoreLabel.text = "Alive: " + str(score)
+	$EnergyLabel.text = "Energy: " + str(energy) + "%"
+	$LevelLabel.text = "Level: " + str(level)
 
 func _on_start_button_pressed():
 	$StartButton.hide()
