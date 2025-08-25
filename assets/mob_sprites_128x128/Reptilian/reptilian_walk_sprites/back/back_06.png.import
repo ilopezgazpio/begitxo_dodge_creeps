@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://74byvse5onb6"
-path="res://.godot/imported/mob1.png-12a137a13038652dd500c8e39f861c64.ctex"
+uid="uid://b3nw8uvrbsc71"
+path="res://.godot/imported/back_06.png-f565f2ab15e2033f1380820cbda179f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mob_sprites_128x128/mob1.png"
-dest_files=["res://.godot/imported/mob1.png-12a137a13038652dd500c8e39f861c64.ctex"]
+source_file="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/back/back_06.png"
+dest_files=["res://.godot/imported/back_06.png-f565f2ab15e2033f1380820cbda179f5.ctex"]
 
 [params]
 
