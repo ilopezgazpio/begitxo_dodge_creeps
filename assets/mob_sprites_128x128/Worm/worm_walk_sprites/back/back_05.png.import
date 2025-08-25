@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boso5pcnfgw4v"
-path="res://.godot/imported/mob2.png-c8ef1c916004eefc67c92fa312c84ab7.ctex"
+uid="uid://dguxmj4p4np6s"
+path="res://.godot/imported/back_05.png-9a0ad323eb238e977109b1ea09895371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mob_sprites_128x128/mob2.png"
-dest_files=["res://.godot/imported/mob2.png-c8ef1c916004eefc67c92fa312c84ab7.ctex"]
+source_file="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/back/back_05.png"
+dest_files=["res://.godot/imported/back_05.png-9a0ad323eb238e977109b1ea09895371.ctex"]
 
 [params]
 

@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bq88hox5nw2mk"]
+[gd_scene load_steps=21 format=3 uid="uid://bq88hox5nw2mk"]
 
 [ext_resource type="Script" uid="uid://mvmgaa604xpn" path="res://scripts/mob.gd" id="1_71rcx"]
-[ext_resource type="Texture2D" uid="uid://boso5pcnfgw4v" path="res://assets/mob_sprites_128x128/mob2.png" id="2_71rcx"]
 [ext_resource type="Texture2D" uid="uid://cfkxpik0orkr5" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_01.png" id="2_m0xve"]
 [ext_resource type="Texture2D" uid="uid://cfa0cpilrborl" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_02.png" id="3_m0elm"]
 [ext_resource type="Texture2D" uid="uid://ttyiu73gk8kk" path="res://assets/mob_sprites_128x128/mob3.png" id="3_xsfyf"]
@@ -11,6 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://dahc5w3r5d3yf" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_06.png" id="7_lgqhy"]
 [ext_resource type="Texture2D" uid="uid://d3s1oj4oggr3b" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_07.png" id="8_m170w"]
 [ext_resource type="Texture2D" uid="uid://cye0ha4426mdj" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_08.png" id="9_hict5"]
+[ext_resource type="Texture2D" uid="uid://cahi4pub4jcfe" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_01.png" id="10_hict5"]
+[ext_resource type="Texture2D" uid="uid://ls2aerpq7coq" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_02.png" id="11_eucmk"]
+[ext_resource type="Texture2D" uid="uid://cp2bj3bj856mp" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_03.png" id="12_nk21u"]
+[ext_resource type="Texture2D" uid="uid://b8m60q5kop02q" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_04.png" id="13_cq7k1"]
+[ext_resource type="Texture2D" uid="uid://ct5q6cusiukvi" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_05.png" id="14_mq56s"]
+[ext_resource type="Texture2D" uid="uid://c3sfium424nq5" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_06.png" id="15_fkklv"]
+[ext_resource type="Texture2D" uid="uid://dn8vwrfres76l" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_07.png" id="16_pch0e"]
+[ext_resource type="Texture2D" uid="uid://wposstyfrwna" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_08.png" id="17_rswon"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4cuo"]
 radius = 26.0
@@ -44,16 +51,37 @@ animations = [{
 "texture": ExtResource("9_hict5")
 }],
 "loop": true,
-"name": &"Reptilian",
+"name": &"Reptilian_front",
 "speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_71rcx")
+"texture": ExtResource("10_hict5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_eucmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nk21u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cq7k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mq56s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fkklv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pch0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rswon")
 }],
 "loop": true,
-"name": &"mob2",
-"speed": 5.0
+"name": &"Worm_front",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -76,8 +104,9 @@ shape = SubResource("CapsuleShape2D_d4cuo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_h8ps3")
-animation = &"Reptilian"
-frame_progress = 0.20049
+animation = &"Worm_front"
+frame = 5
+frame_progress = 0.559918
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
