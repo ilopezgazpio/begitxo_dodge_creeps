@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bq88hox5nw2mk"]
+[gd_scene load_steps=28 format=3 uid="uid://bq88hox5nw2mk"]
 
 [ext_resource type="Script" uid="uid://mvmgaa604xpn" path="res://scripts/mob.gd" id="1_71rcx"]
 [ext_resource type="Texture2D" uid="uid://cfkxpik0orkr5" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_01.png" id="2_m0xve"]
 [ext_resource type="Texture2D" uid="uid://cfa0cpilrborl" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_02.png" id="3_m0elm"]
-[ext_resource type="Texture2D" uid="uid://ttyiu73gk8kk" path="res://assets/mob_sprites_128x128/mob3.png" id="3_xsfyf"]
 [ext_resource type="Texture2D" uid="uid://domlltqrmvbmv" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_03.png" id="4_fla60"]
 [ext_resource type="Texture2D" uid="uid://dkmsm7e4jqjhq" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_04.png" id="5_805hl"]
 [ext_resource type="Texture2D" uid="uid://c1mc5rpxswcqs" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_05.png" id="6_jr3yx"]
@@ -11,13 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://d3s1oj4oggr3b" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_07.png" id="8_m170w"]
 [ext_resource type="Texture2D" uid="uid://cye0ha4426mdj" path="res://assets/mob_sprites_128x128/Reptilian/reptilian_walk_sprites/front/front_08.png" id="9_hict5"]
 [ext_resource type="Texture2D" uid="uid://cahi4pub4jcfe" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_01.png" id="10_hict5"]
+[ext_resource type="Texture2D" uid="uid://d42ybovo0y3y" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_01.png" id="10_rswon"]
 [ext_resource type="Texture2D" uid="uid://ls2aerpq7coq" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_02.png" id="11_eucmk"]
+[ext_resource type="Texture2D" uid="uid://dk12s6cdhbgvx" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_02.png" id="11_gtorj"]
+[ext_resource type="Texture2D" uid="uid://wxch7txcjkuu" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_03.png" id="12_4y8u8"]
 [ext_resource type="Texture2D" uid="uid://cp2bj3bj856mp" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_03.png" id="12_nk21u"]
 [ext_resource type="Texture2D" uid="uid://b8m60q5kop02q" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_04.png" id="13_cq7k1"]
+[ext_resource type="Texture2D" uid="uid://cj3hvr0w2svt1" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_04.png" id="13_n2edf"]
 [ext_resource type="Texture2D" uid="uid://ct5q6cusiukvi" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_05.png" id="14_mq56s"]
+[ext_resource type="Texture2D" uid="uid://ckqw5wl717ua2" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_05.png" id="14_q45gf"]
 [ext_resource type="Texture2D" uid="uid://c3sfium424nq5" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_06.png" id="15_fkklv"]
+[ext_resource type="Texture2D" uid="uid://bysrycf04b26x" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_06.png" id="15_wfby6"]
 [ext_resource type="Texture2D" uid="uid://dn8vwrfres76l" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_07.png" id="16_pch0e"]
+[ext_resource type="Texture2D" uid="uid://cxu2oas4tno68" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_07.png" id="16_u80t3"]
 [ext_resource type="Texture2D" uid="uid://wposstyfrwna" path="res://assets/mob_sprites_128x128/Worm/worm_walk_sprites/front/front_08.png" id="17_rswon"]
+[ext_resource type="Texture2D" uid="uid://ymyvkqsoh7dd" path="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_08.png" id="17_xdk6a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4cuo"]
 radius = 26.0
@@ -56,6 +63,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_rswon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gtorj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4y8u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n2edf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q45gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wfby6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u80t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xdk6a")
+}],
+"loop": true,
+"name": &"Troll_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("10_hict5")
 }, {
 "duration": 1.0,
@@ -82,14 +118,6 @@ animations = [{
 "loop": true,
 "name": &"Worm_front",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_xsfyf")
-}],
-"loop": true,
-"name": &"mob3",
-"speed": 5.0
 }]
 
 [node name="mob" type="RigidBody2D" groups=["mobs"]]
@@ -104,9 +132,7 @@ shape = SubResource("CapsuleShape2D_d4cuo")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_h8ps3")
-animation = &"Worm_front"
-frame = 5
-frame_progress = 0.559918
+animation = &"Troll_front"
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

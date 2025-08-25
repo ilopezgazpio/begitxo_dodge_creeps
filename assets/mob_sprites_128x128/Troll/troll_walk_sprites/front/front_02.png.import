@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ttyiu73gk8kk"
-path="res://.godot/imported/mob3.png-756fa071373fe8c56800d7201726be70.ctex"
+uid="uid://dk12s6cdhbgvx"
+path="res://.godot/imported/front_02.png-4cc305b3d02b8fd63fb938b76cd05e76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mob_sprites_128x128/mob3.png"
-dest_files=["res://.godot/imported/mob3.png-756fa071373fe8c56800d7201726be70.ctex"]
+source_file="res://assets/mob_sprites_128x128/Troll/troll_walk_sprites/front/front_02.png"
+dest_files=["res://.godot/imported/front_02.png-4cc305b3d02b8fd63fb938b76cd05e76.ctex"]
 
 [params]
 
